@@ -8,12 +8,17 @@ from colorfield.fields import ColorField
 
 class YesNoBar(models.Model):
 
+    COLOR_CHOICES = [
+        ("#FFFFFF", "white"),
+        ("#000000", "black")
+    ]
+
     name = models.CharField(max_length=255,null=True)
     category = models.CharField(max_length=100,null=True)
     yes_button_text = models.CharField(max_length=100,blank=True, null=True)
-    yes_button_bg_color = ColorField(format='hexa')
+    yes_button_bg_color = ColorField(choices=COLOR_CHOICES)
     no_button_text = models.CharField(max_length=70,blank=True, null=True)
-    no_button_bg_color = ColorField(format='hexa')
+    no_button_bg_color = ColorField(choices=COLOR_CHOICES)
     question = models.CharField(max_length=255, blank=True, null=True)
     thank_you_toggle = models.BooleanField(max_length=255, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,null=True, related_name='user_booking')
