@@ -32,6 +32,14 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
+MARKDOWNIFY_STRIP = True
+MARKDOWNIFY_WHITELIST_TAGS = {
+ 'a',
+ 'p',
+ 'h1', 'h2', 'h3','h4', 'h5', 'h6', 'h7',
+ 'ul', 'li', 'span',
+}
+
 
 # Application definition
 
@@ -43,7 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mockDownApp',
-    'colorfield'
+    'colorfield',
+    'bootstrap4',
+    'markdownify',
+    'django_markup',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

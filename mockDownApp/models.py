@@ -20,7 +20,7 @@ class YesNoBar(models.Model):
     no_button_text = models.CharField(max_length=70,blank=True, null=True)
     no_button_bg_color = ColorField(choices=COLOR_CHOICES)
     question = models.CharField(max_length=255, blank=True, null=True)
-    thank_you_toggle = models.BooleanField(max_length=255, blank=True, null=True)
+    thank_you_toggler = models.BooleanField(default=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,null=True, related_name='user_booking')
 
 

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static%}
+
+<!-- {% load markdownify %}
+ {% load markup_tags %} -->
+
+{% block content %}
+{{block.super}}
+    <title> {{ title }} </title>
+    <div class="container-fluid">
+
+        <div class="row  ml-1">
+            <div class="col-md-5 left"  id='myTestELement'>
+                <div class="card" style="height:200px; width:500px; display:flex; position:absolute; top: 500px; margin-left:30px;">
+                    <div class="content">
+                        <h4 class="questionText"  data-tw-bind="name"></h4>
+                        <div class="btn" style="position: absolute;  right: 35%; top: 55%;">
+                            <div class="yesBtn" style="height:30px; width:100px; border: solid 1px; border-radius:15px; background-color:rgb(93, 241, 93); margin-right: 10px;" data-tw-bind="yesText"></div>
+                            <div class="noBtn" style="height:30px; width:100px; border: solid 1px; border-radius:15px; background-color:rgb(74, 115, 228); margin-left: 20px" data-tw-bind="noText"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-7 right">
+                <div class="forms">
+                    <div class="header">
+                        <h1> Yes Or No Bar</h1>
+                    </div>
+                    <form action="" method="post">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name" data-tw-bind="name" placeholder="your name here.."><br>
+                        <label for="category">category</label><br>
+                        <input type="text" name="category" id="category" ><br>
+                        <label for="yesText">Yes Text</label><br>
+                        <input type="text" name="yesText" id="yesText" data-tw-bind="yesText"><br>
+                        <label for="noText">No text</label><br>
+                        <input type="text" name="noText" id="notext" data-tw-bind="noText"><br>
+                        <label for="colorBg">Backround color</label><br>
+                        <input readonly type="text" name="colorBg" id="name" value="#ff0000" style="border: solid 1px; border-radius:3px; padding:0px; background-color: white;"><br>
+                        <input readonly="" type="text" class="ant-input" value="#fff" style="width: 100px;">
+                        <div class="container">
+                            <input type="color" id="primary_color" class="field-radio">
+                            <span class="container" id="color_val"></span>
+                        </div>
+                        <div style="display: inline-block; vertical-align: middle; margin-left: 4px; margin-top: -3px; width: 36px; height: 36px; border-radius: 3px; background: rgb(144, 144, 144); border: 1px solid rgb(217, 217, 217);"></div>
+                        <label for="colorBtn">Color Button</label><br>
+                        <input type="color" name="colorBtn" id="name"><br>
+                    </form>
+                </div>
+                <input type="text"  id="myInput">
+                <button onclick="myFunction()">Copy text</button>
+
+            </div>
+
+
+            <!-- <div id='myTestELement' style='background-color:grey;'>
+                Hello
+                </div> -->
+                <!-- <input type="text"  id="myInput"> -->
+
+
+                <!-- Name: <input data-tw-bind="name" type="text">
+                <span data-tw-bind="name"></span>
+                <hr />
+                Surname: <input data-tw-bind="surname" type="text">
+                <span data-tw-bind="surname"></span>
+                <hr /> -->
+                <!-- <button onclick="log()">See Scope Values</button>
+                <hr />
+                <button onclick="changeNameByCode()">Change Name By Code</button>
+                <hr />
+                <button onclick="changeSurnameByCode()">Change Surname By Code</button>
+                <hr /> -->
+
+
+
+
+        </div>
+</div>
+
+{% endblock %}
+
+

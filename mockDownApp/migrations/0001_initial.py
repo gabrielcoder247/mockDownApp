@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('no_button_text', models.CharField(blank=True, max_length=70, null=True)),
                 ('no_button_bg_color', colorfield.fields.ColorField(default='#FFFFFFFF', max_length=18)),
                 ('question', models.CharField(blank=True, max_length=255, null=True)),
-                ('thank_you_toggle', models.BooleanField(blank=True, max_length=255, null=True)),
+                ('thank_you_toggler', models.BooleanField(blank=True, max_length=255, null=True)),
                 ('user', models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='user_booking', to=settings.AUTH_USER_MODEL)),
             ],
         ),
