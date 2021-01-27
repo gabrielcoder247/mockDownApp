@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static%}
+
+<!-- {% load markdownify %}
+ {% load markup_tags %} -->
+
+{% block content %}
+{{block.super}}
+    <title> {{ title }} </title>
+    <div class="container-fluid">
+
+        <div class="header">
+            <div class="header-text">
+                <h3 style="color: blue;"> Your Summary</h3>
+            </div>
+           <div class="create">
+               <a class="nav-item nav-link brand"  href="{% url 'yesNoBar' %}"><i class="fas fa-home"></i>  Home</a>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- <div class="col-md-3">
+
+            </div>
+
+            <div class="col-md-9 ">
+
+
+            </div> -->
+            <div class="col-md-1"></div>
+
+            <div class="card col-md-3" style="height: 700px;">
+                <div class="card-body">
+                    <div class="row ml-1" >
+                     <h4 class="card-title" style="color:blue; font-size: 24px"><i class="fas fa-map-marked-alt"></i> Polling Units</h4>
+                     <h4 class="card-title ml-auto mr-3" style="color:blue; font-size: 26px"><i class="fas fa-map-marked-alt"></i> Votes Results</h4>
+                    </div>
+                    <hr>
+                    <div class="row ml-1" >
+                        <div>
+                         <p class="card-title" style="color:blue; font-size: 28px; font-weight: bold;"><i class="fas fa-map-marked-alt"></i> {{p_unit.polling_unit_name}}</p>
+                        </div>
+                    <div class=" ml-auto mr-3" >
+                     <p class="card-title" style="color:blue; font-size: 20px"> PDP <span > {{p_unit.pdp}}</span> </p>
+                    </div>
+
+                    </div>
+
+                    <!-- <p class="metadata">Located in  </p> -->
+                    <p class="metadata" style="color:blue;"> <b>Polling unit description</b> {{p_unit.polling_unit_description}}</p>
+                    <!-- <p> <small class="text-muted">{{p_unit.party_id.party_name}} | {{p_unit.party_score}}</small></p> -->
+
+
+                    <hr>
+                    <!-- <p class="metadata mb-0 mt-0" > <p style="color:blue;"> <small> Posted on {{p_unit.date_entered}}</small> <br> <i>  <small> <b>by  {{p_unit.user.username}} </b></small> </i></p> -->
+
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+</div>
+
+{% endblock %}
+
+

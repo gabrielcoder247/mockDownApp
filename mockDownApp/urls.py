@@ -13,7 +13,7 @@ from . import views
 urlpatterns=[
     # path(r'',views.index,name = 'index_page'),
     re_path(r'index/(\d+)/$', views.home, name = 'home_page'),
-    # re_path(r'^new/p_unit$',views.p_unit,name='p_unit_form'),
+    re_path(r'^new/yesNoBar/$', views.yesNoBar, name='yesNoBar'),
     # re_path(r'^new/state$',views.state,name='state_form'),
     # re_path(r'^new/ward$',views.ward,name='ward_form'),
     # re_path(r'^new/lga$',views.lga,name='lga_form'),

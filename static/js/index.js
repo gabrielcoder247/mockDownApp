@@ -117,3 +117,30 @@ var colorButton = document.getElementById("primary_color");
         colorDiv.innerHTML = colorButton.value;
         colorDiv.style.color = colorButton.value;
     }
+
+
+    var colorButton2 = document.getElementById("primary_color2");
+    var colorDiv2 = document.getElementById("color_val2");
+    colorButton2.onchange = function() {
+        colorDiv2.innerHTML = colorButton2.value;
+        colorDiv2.style.color = colorButton2.value;
+    }
+
+
+    // Element Background color input function code here...
+
+    $("#primary_color").change(function(){
+        $("#cardBg").css('background', $(this).val());
+      });
+
+    //   Button background color for yesBtnBg input function code here ...
+
+      $("#primary_color2").change(function(){
+        $("#yesBtnBg").css('background', $(this).val());
+      });
+
+    //   Button background color for noBtnBg input function code here ...
+
+    $("#primary_color3").change(function(){
+        $("#noBtnBg").css('background', $(this).val());
+      });
